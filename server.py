@@ -39,10 +39,10 @@ if __name__=="__main__":
                 buf = b2s(connection.recv(1024))
                 print ("Get value " + buf)
                 if buf == '1':
-                  REMOTE_ADDR = request.META['REMOTE_ADDR'].split(':')[0]
-                  HTTP_HOST = request.META['HTTP_HOST']
-                  print(REMOTE_ADDR)
-                  print(HTTP_HOST)
+                  # REMOTE_ADDR = request.META['REMOTE_ADDR'].split(':')[0]
+                  # HTTP_HOST = request.META['HTTP_HOST']
+                  # print(REMOTE_ADDR)
+                  # print(HTTP_HOST)
                   print ("send welcome")
                   connection.send(s2b('welcome to server!'))
                 elif buf!='0':
