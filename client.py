@@ -15,12 +15,12 @@ def s2b(s):
 
 if __name__=="__main__":
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.connect(('47.100.91.71', 8001))
+    sock.connect(('119.103.22.118', 8001))
     flag = '1'
     while True:
         time.sleep(3)
         print ('send to server with value: '+ flag)
         sock.send(s2b(flag))
-        print (b2s(sock.recv(1024)))  #限制每次发送数据的大小
+        print (b2s(sock.recv(1024)))  #recv为接收的内容
         flag = input("input:")
     sock.close()
