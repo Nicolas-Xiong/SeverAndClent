@@ -22,5 +22,5 @@ if __name__=="__main__":
         print ('send to server with value: '+ flag)
         sock.send(s2b(flag))
         print (b2s(sock.recv(1024)))  #限制每次发送数据的大小
-        flag = (flag=='1') and '2' or '1' #change to another type of value each time
+        flag = input("input:")
     sock.close()
