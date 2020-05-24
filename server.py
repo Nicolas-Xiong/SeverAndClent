@@ -5,6 +5,7 @@ Created on Sun May 24 08:28:28 2020
 @author: Nicolas Xiong
 """
 import socket
+import request
 
 '''''
 建立一个python server，监听指定端口，
@@ -38,6 +39,10 @@ if __name__=="__main__":
                 buf = b2s(connection.recv(1024))
                 print ("Get value " + buf)
                 if buf == '1':
+                  REMOTE_ADDR = request.META['REMOTE_ADDR'].split(':')[0]
+                  HTTP_HOST = request.META['HTTP_HOST']
+                  print(REMOTE_ADDR)
+                  print(HTTP_HOST)
                   print ("send welcome")
                   connection.send(s2b('welcome to server!'))
                 elif buf!='0':
