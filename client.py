@@ -15,7 +15,7 @@ def s2b(s):
 
 if __name__=="__main__":
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.connect(('localhost', 8001))
+    sock.connect(('47.100.91.71', 8001))
     flag = '1'
     while True:
         time.sleep(3)
