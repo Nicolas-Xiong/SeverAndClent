@@ -20,7 +20,7 @@ def s2b(s):
 if __name__=="__main__":
     print ("Server is starting")
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.bind(('localhost', 8001)) #配置soket，绑定IP地址和端口号
+    sock.bind(('172.17.52.129', 8001)) #配置soket，绑定IP地址和端口号
     sock.listen(5) #设置最大允许连接数，各连接和server的通信遵循FIFO原则
     print ("Server is listenting port 8001, with max connection 5")
     while True: #循环轮询socket状态，等待访问
